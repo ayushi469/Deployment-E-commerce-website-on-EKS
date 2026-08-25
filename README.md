@@ -77,4 +77,6 @@ Installing jenkins
 8. brew services start jenkins-lts : to start the service
 
 
-check now
+To setup the github webhook and jenkins 
+brew install ngrok
+ngork http 80
