@@ -75,3 +75,6 @@ Installing jenkins
 6. jenkins-lts --version
 7. brew services list | grep -i jenkins
 8. brew services start jenkins-lts : to start the service
+
+
+check now
