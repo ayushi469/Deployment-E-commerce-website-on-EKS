@@ -63,3 +63,15 @@ next steps:
 Dockerize everything :
 1. indiviaully run all docker container, 1 container for angular , 1 is for .NET and 1 is for postgress
 2. try to connect them each and try if the application is working like it is working excatly like locally
+
+
+Installing jenkins 
+
+1. brew --version
+2. brew install jenkins-lts
+3. brew list --formula | grep jenkins
+4. brew --prefix jenkins-lts
+5. export PATH="/opt/homebrew/opt/jenkins-lts:$PATH"
+6. jenkins-lts --version
+7. brew services list | grep -i jenkins
+8. brew services start jenkins-lts : to start the service
