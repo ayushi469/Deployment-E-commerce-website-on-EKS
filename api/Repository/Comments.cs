@@ -9,7 +9,7 @@ namespace pillar.Repository
 {
     public class Comments
     {
-        const string connString = "Host=postgres;Username=postgres;Password=mysecretpassword;Database=pillar";
+        const string connString = "Host=postgress_database;Username=postgres;Password=mysecretpassword;Database=pillar";
         
         public static Comment.Comment Add(pillar.Comment.Comment comment)
         {

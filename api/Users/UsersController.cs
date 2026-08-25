@@ -72,8 +72,8 @@ namespace pillar.User
             var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("p!ll@r-t!ck3t-$y$t3m"));
             var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
             var tokenOptions = new JwtSecurityToken(
-                issuer: "http://localhost:5000",
-                audience: "http://localhost:5000",
+                issuer: "http://localhost:5007",
+                audience: "http://localhost:5007",
                 claims: new List<Claim>(),
                 expires: DateTime.Now.AddDays(1),
                 signingCredentials: signinCredentials
