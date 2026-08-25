@@ -23,7 +23,7 @@ pipeline {
         }
 
         stage("Build Frontend Image") {
-            step {
+            steps {
                 dir('ui') {
                     sh 'docker build -t ${FRONTENT_IMAGE}:${GIT_COMMIT_ID} .'
                 }
