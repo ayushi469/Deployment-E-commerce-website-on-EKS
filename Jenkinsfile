@@ -10,6 +10,14 @@ pipeline {
     }
 
     stages{
+        stage('check the jenkins enviorment') {
+            steps{
+                sh '''
+                echo "Path"
+                echo $PATH
+                '''
+            }
+        }
         stage("Authentication to ECR") {
             steps {
                 sh '''
