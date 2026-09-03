@@ -7,6 +7,7 @@ pipeline {
         REGION="us-east-1"
         AWS_ACCOUNT_ID="593901684160"
         IMAGE_TAG="${GIT_COMMIT}"
+        PATH="/usr/local/bin:${env.PATH}"
     }
 
     stages{
@@ -18,6 +19,7 @@ pipeline {
                 '''
             }
         }
+
         stage("Authentication to ECR") {
             steps {
                 sh '''
