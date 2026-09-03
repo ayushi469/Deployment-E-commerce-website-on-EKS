@@ -1,7 +1,5 @@
 pipeline {
-    agent{
-        label 'ec2-machine-agent'
-    }
+    agent any
 
     environment {
         FRONTENT_IMAGE="angular_image"

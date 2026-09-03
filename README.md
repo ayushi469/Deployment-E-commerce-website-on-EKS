@@ -80,3 +80,18 @@ Installing jenkins
 To setup the github webhook and jenkins 
 brew install ngrok
 ngork http 80
+
+
+## agent should have java installed
+
+1. sudo apt update
+2. sudo apt install openjdk-21-jre -y
+
+curl -fsSL https://awscli.amazonaws.com/v2/install.sh | bash
+
+sudo systemctl start docker
+sudo apt install docker.io -y
+
+to check how much docker is consuming space
+
+sudo docker system df
