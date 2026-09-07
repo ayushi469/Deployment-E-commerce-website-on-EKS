@@ -68,7 +68,7 @@ pipeline {
             steps {
                 dir('frontend-k8s') {
                 sh '''
-                sed -i "s/IMAGE_TAG/${GIT_COMMIT}/g" deployment.yaml
+                sed -i '' "s/IMAGE_TAG/${GIT_COMMIT}/g" deployment.yaml
                 kubectl apply -f deployment.yaml
                 kubectl apply -f service.yaml
                 '''
@@ -80,7 +80,7 @@ pipeline {
             steps {
                 dir('backend-k8s') {
                     sh '''
-                    sed -i "s/IMAGE_TAG/${GIT_COMMIT}/g" deployment.yaml
+                    sed -i '' "s/IMAGE_TAG/${GIT_COMMIT}/g" deployment.yaml
                     kubectl apply -f deployment.yaml
                     kubectl apply -f service.yaml
                     '''
