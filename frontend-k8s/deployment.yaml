@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend-pods
+  template:
+    metadata:
+      labels:
+        app: frontend-pods
+    spec:
+      containers:
+      - name: frontend
+        image: 593901684160.dkr.ecr.us-east-1.amazonaws.com/frontend-repo:513382d3ad7bfc362e81141fb526e42380edee65
+        ports:
+        - containerPort: 4200

@@ -63,6 +63,28 @@ pipeline {
                 '''
             }
         }
+
+        stage("Deploy the frontend application on EKS") {
+            steps {
+                dir('frontend-k8s') {
+                sh '''
+                kubectl apply -f deployment.yaml
+                kubectl apply -f service.yaml
+                '''
+            }
+            }
+        }
+
+        stage("Deploy the backend application on EKS") {
+            steps {
+                dir('backend-k8s') {
+                    sh '''
+                    kubectl apply -f deployment.yaml
+                    kubectl apply -f service.yaml
+                    '''
+                }
+            }
+        }
     }
 
     post {

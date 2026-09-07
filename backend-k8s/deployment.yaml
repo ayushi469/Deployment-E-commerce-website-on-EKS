@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend-pods
+  template:
+    metadata:
+      labels:
+        app: backend-pods
+    spec:
+      containers:
+      - name: backend
+        image: 593901684160.dkr.ecr.us-east-1.amazonaws.com/backend-repo:latest
+        ports:
+        - containerPort: 5007
