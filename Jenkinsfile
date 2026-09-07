@@ -58,8 +58,8 @@ pipeline {
         stage("Push to ECR Backend repo") {
             steps {
                 sh '''
-                docker tag ${BACKEND_IMAGE}:${IMAGE_TAG} ${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/backend-repo
-                docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/backend-repo
+                docker tag ${BACKEND_IMAGE}:${IMAGE_TAG} ${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/backend-repo:${IMAGE_TAG}
+                docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/backend-repo:${IMAGE_TAG}
                 '''
             }
         }
